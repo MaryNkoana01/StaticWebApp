@@ -44,7 +44,6 @@ jobs:
             --name $resourceGroupName \
             --location ${{ env.AZURE_LOCATION }}
           echo "::set-output name=resource_group_name::$resourceGroupName"
-          
 
       - name: Deploy Static Web App to Azure
         run: |
@@ -57,7 +56,6 @@ jobs:
             --app-location "public" \
             --output-location "build"  \
             --login-with-github
-
 
       - name: Check Deployment Status
         run: |
